@@ -1,4 +1,5 @@
 import type { Coordinates } from "@/api/types";
+import { useState } from "react";
 
 interface GeolocationState {
     coordinates: Coordinates | null;
@@ -7,5 +8,9 @@ interface GeolocationState {
 }
 
 export function useGeolocation() {
-    const [locationData, setLocationData] = useState({});
+    const [locationData, setLocationData] = useState<GeolocationState>({
+        coordinates: null,
+        error: null,
+        isLoading: true,
+    });
 }

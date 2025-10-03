@@ -1,5 +1,5 @@
 import { useFavorite } from "@/hooks/use-favorite"
-import { ScrollArea } from "./ui/scroll-area";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 import { useWeatherQuery } from "@/hooks/use-weather";
 import { Loader2, X } from "lucide-react";
@@ -36,6 +36,7 @@ const FavoriteCities = () => {
                     );
                 })}
             </div>
+            <ScrollBar orientation="horizontal" />
         </ScrollArea>
     </>
   );

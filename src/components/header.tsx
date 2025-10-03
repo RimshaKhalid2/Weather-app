@@ -17,9 +17,13 @@ const Header = () => {
                 />
             </Link>
 
-            <div className="flex gap-4">
+            <div className="flex items-center gap-3">
+            <div>
                 <CitySearch />
+            </div>
+            
 
+            <div>
                 {/* theme toggle */}
                 <div onClick={() => setTheme(isDark ? "light" : "dark")}
                     className={`flex items-center cursor-pointer transition-transform duration-500
@@ -32,6 +36,7 @@ const Header = () => {
                         <Moon className="h-6 w-6 text-blue-500 rotate-0 transition-all" />
                     )}
                 </div>
+            </div>
             </div>
         </div>
     </header>
